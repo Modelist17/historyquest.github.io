@@ -1,11 +1,19 @@
-.c1 {
+.nav {
     background-color: chartreuse;
 }
 
-.c2 {
+.article {
     background-color: goldenrod;
 }
 
-.c3 {
+.footer {
     background-color: red;
+}
+
+.c4 {
+    background-color: royalblue;
+}
+
+.c5 {
+    background-color: seagreen;
 }
