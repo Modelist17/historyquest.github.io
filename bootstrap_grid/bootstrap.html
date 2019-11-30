@@ -14,7 +14,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
+    <script src="bomb.js"></script>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -43,49 +44,96 @@
             <div class="c2">2</div> -->
             <div class="row c4">
                 <div class="col-12 col-md-4 poster">
-                    <img class="img-fluid" src="../img/1024px-Comintern_Logo.svg_-e1562703515564.png" alt="">
+                    <img class="img-fluid" id="img_bomb"  src="RightDistantArawana-mobile.gif" alt="">
                 </div>
                 <div class="col-12 col-md-8">
                     <div class="row align-items-center">
+                        <div class="col-4 align-self-center">Name of Bombs</div>
+                        <div class="col-8">
+                         <form action="">
+                             <select name="bomb_name" id="bomb_name" onchange="Change_Bomb()">
+                                   <!-- <option value="0">Bomb </option>
+                                   <option value="1">Bomb 1</option> 
+                                   <option value="2">Bomb 2</option> -->
+                             </select>
+                         </form>
+                             
+                        </div>
                         <div class="col-4 align-self-center">Tested:</div>
-                        <div class="col-8">30/10/1961</div>
+                        <div class="col-8" id="tested">30/10/1961</div>
                         <div class="col-4 align-self-center">Name:</div>
-                        <div class="col-8">Tsar-Bomba</div>
+                        <div class="col-8" id="name">Tsar-Bomba</div>
                         <div class="col-4 align-self-center">Variant:</div>
-                        <div class="col-8">A620EN</div>
+                        <div class="col-8" id="variant">A620EN</div>
                         <div class="col-4 align-self-center">Weight:</div>
-                        <div class="col-8">26,500 kg</div>
+                        <div class="col-8" id="weight">26,500 kg</div>
                         <div class="col-4 align-self-center">The power of exploding:</div>
-                        <div class="col-8">58,6 megatons of TNT</div>
+                        <div class="col-8" id="power_exploding">58,6 megatons of TNT</div>
                     </div>
-
                 </div>
             </div>
             <div class="row c5">
-                <div class="col dis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor urna non
-                    tortor euismod, in ultricies turpis euismod. Fusce lacinia turpis erat, vitae rutrum quam luctus at.
-                    Curabitur placerat massa ut sollicitudin pretium. Aliquam erat volutpat. Etiam vitae nulla varius,
-                    pellentesque ante id, aliquam odio. Morbi vulputate a est nec sodales. Morbi eu egestas ante, vitae
-                    accumsan tellus. Aenean consectetur urna maximus lacus molestie dapibus.
+                <div class="col dis">
+                    <p id="history">Analysis</p>
+                    <!-- The Tsar Bomba is the single most physically powerful device ever deployed on Earth.[36] For
+                    comparison, the largest weapon ever produced by the U.S., the now-decommissioned B41, had a
+                    predicted maximum yield of 25 megatons of TNT (100 PJ). The largest nuclear device ever tested by
+                    the U.S. (Castle Bravo) yielded 15 megatons of TNT (63 PJ) because of an unexpectedly high
+                    involvement of lithium-7 in the fusion reaction; the preliminary prediction for the yield was from 4
+                    to 6 megatons of TNT (17 to 25 PJ). The largest weapons deployed by the Soviet Union were also
+                    around 25 megatons of TNT (100 PJ) (e.g., the SS-18 Mod. 3 warhead).
 
-                    Etiam cursus dolor vitae orci gravida gravida. Nam quis faucibus nibh, quis ullamcorper ligula. Ut
-                    nec sapien faucibus, accumsan leo eu, consectetur nulla. Suspendisse consequat diam diam, sed
-                    vestibulum mi aliquet vel. Aliquam in mattis nulla. In vestibulum, sem ac posuere vehicula, risus
-                    mauris suscipit sapien, eget consectetur justo dolor in purus. Sed in scelerisque orci. Praesent a
-                    pharetra justo.
+                    The weight and size of the Tsar Bomba limited the range and speed of the specially modified bomber
+                    carrying it. Delivery by an intercontinental ballistic missile would have required a much stronger
+                    missile (the Proton started its development as that delivery system). It has been estimated that
+                    detonating the original 100 Mt design would have released fallout amounting to about 26% of all
+                    fallout emitted since the invention of nuclear weapons.[37] It was decided that a full 100 Mt
+                    detonation would create a nuclear fallout that was unacceptable in terms of pollution from a single
+                    test, as well as a near certainty that the release plane and crew would be destroyed before it could
+                    escape the blast radius.[38]
 
-                    Proin porta non est ac mattis. Quisque fermentum erat nec tristique ultricies. Donec ornare, felis
-                    vitae accumsan lacinia, mi tortor aliquam enim, in vulputate justo justo sed tortor. Cras metus
-                    velit, convallis a dolor et, feugiat pharetra massa. Suspendisse ut consectetur velit. Curabitur
-                    volutpat lacus tincidunt cursus ullamcorper. Vivamus malesuada id enim eget mollis. Nunc elementum
-                    risus turpis, sit amet vulputate mi placerat ut. Integer purus tortor, maximus eget nunc a, auctor
-                    fringilla nisi.
+                    The Tsar Bomba was the culmination of a series of high-yield thermonuclear weapons designed by the
+                    Soviet Union and the United States during the 1950s (e.g., the Mark 17[39] and B41 nuclear
+                    bombs).[1] -->
+<!-- 
+                    <br><br><br>
 
-                    Nulla pharetra odio ac pretium accumsan. Curabitur eu aliquet ante. Fusce consectetur ex ac ornare
-                    pellentesque. Nulla vitae ligula a sem facilisis condimentum. Nulla fringilla fringilla tellus non
-                    iaculis. Suspendisse felis massa, venenatis non odio blandit, rutrum interdum tortor. Donec
-                    lobortis, arcu vel dapibus tincidunt, eros felis condimentum eros, a tempus turpis orci et tortor.
-                    Proin semper quis nisl sed dignissim. Duis euismod odio ac sagittis gravida.
+                    <p>Test</p> -->
+                    <!-- Despite the creation of the Tu-95V bomb-carrier aircraft, the actual test of the Tsar Bomba was
+                    postponed due to political reasons, namely Khrushchev's visit to the United States and a pause in
+                    the Cold War. The Tu-95V during this period was flown to Uzin (situated in today's Ukraine) and was
+                    used as a training aircraft, therefore it was no longer listed as a combat aircraft. With the
+                    beginning of a new round of the Cold War in 1961, the test was resumed. The Tu-95V had all
+                    connectors in its automatic release mechanism replaced, the bomb bay doors removed, and the aircraft
+                    itself covered with a special reflective white paint. Khrushchev himself personally announced the
+                    upcoming tests of the Tsar Bomba in his report at the 22nd Congress of the CPSU on 17 October 1961.
+
+                    The Tsar Bomba was tested on 30 October 1961, flown to its test site by Major Andrei Durnovtsev. The
+                    Tu-95 bombers were designed to carry much lighter and smaller weapons (at maximum 27 tons after
+                    modernization[26]), meaning the Tsar Bomba was too big to be placed on a missile and too heavy for
+                    the planes to transport it to the target with enough fuel.[23]
+
+                    Taking off from the Olenya airfield in the Kola Peninsula, the release plane was accompanied by a
+                    Tu-16 observer plane that took air samples and filmed the test. Both aircraft were painted with the
+                    special reflective paint to minimize heat damage. Despite this effort, Durnovtsev and his crew were
+                    given only a 50% chance of surviving the test.[10]
+
+                    The bomb, weighing 27 metric tons, was so large (8 metres [26 ft] long by 2.1 metres [6 ft 11 in] in
+                    diameter) that the Tu-95V had to have its bomb bay doors and fuselage fuel tanks removed[1] (it is
+                    also larger than what the original layouts would suggest). The bomb was attached to an 800-kilogram
+                    (1,800 lb), 1,600-square-metre (17,000 sq ft) parachute, which gave the release and observer planes
+                    time to fly about 45 kilometres (28 mi) away from ground zero, giving them a 50 percent chance of
+                    survival.[23] The bomb was released two hours after takeoff from a height of 10,500 m (34,500 ft) on
+                    a test target within Sukhoy Nos. The Tsar Bomba detonated at 11:32 (or 11:33) Moscow Time on 30
+                    October 1961, over the Mityushikha Bay nuclear testing range (Sukhoy Nos Zone C), north of the
+                    Arctic Circle over the Novaya Zemlya archipelago in the Arctic Ocean, at a height of 4,200 m ASL
+                    (4000 m above the target)[4][22][25] (some sources suggest 3,900 m ASL and 3,700 m above target, or
+                    4,500 m). By this time the Tu-95V had already escaped to 39 km (24 mi) away, and the Tu-16 53.5 km
+                    (33.2 mi) away. When detonation occurred, the shock wave caught up with the Tu-95V at a distance of
+                    115 km (71 mi) and the Tu-16 at 205 km (127 mi), and the Tu-95V dropped 1 kilometre (0.62 mi) in the
+                    air because of the shock wave but was able to recover and land safely.[10] According to initial
+                    data, the Tsar Bomba had a nuclear yield of 58.6 Mt (245 PJ) (significantly exceeding what the
+                    design itself would suggest), and was overestimated at values all the way up to 75 Mt (310 PJ).
 
                     Integer id eros pharetra mi placerat bibendum quis at enim. Cras dictum, mauris quis scelerisque
                     ultrices, mauris ante volutpat nibh, quis congue mauris magna ac mauris. Integer suscipit elit
@@ -95,7 +143,8 @@
                     tempus urna. Aenean ut est metus. Sed placerat est fringilla imperdiet suscipit. Nulla eu ipsum eget
                     neque eleifend ultricies non ac enim. Duis pretium scelerisque rhoncus. Sed augue lectus, varius id
                     ultrices in, ultricies non orci. Donec quis nisl dignissim, malesuada arcu eget, tincidunt tellus.
-                    Aliquam accumsan posuere ullamcorper.</div>
+                    Aliquam accumsan posuere ullamcorper. -->
+                </div>
             </div>
         </div>
     </div>
