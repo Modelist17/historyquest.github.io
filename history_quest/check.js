@@ -1,14 +1,4 @@
-var A = [];
-A[0] = "1928";
-A[1] = "1941";
-A[2] = "1942";
-A[3] = "3";
-A[4] = "Кошкин";
-A[5] = "Клим Ворошилов";
-A[6] = "Генерал Эрвин Роммель";
-A[7] = "3 года в Заксенхаузене";
-A[8] = "Schutz staffel";
-A[9] = "45.9";
+'use strict';
 
 var score = 0;
 
@@ -17,13 +7,34 @@ var data;
 $('document').ready(function () {
     console.log("Document Ready");
 
+    var numq = 5;
+
+    var RandNum = [];
+    for (var i = 0; i < numq; i++) {
+        RandNum[i] = Math.floor(Math.random() * Math.floor(Q.length));
+
+        for (var x = 0; x < i; x++) {
+            if (RandNum[i] == RandNum[x]) {
+                RandNum[i] = Math.floor(Math.random() * Math.floor(Q.length));
+                x = -1;
+            }
+        }
+
+        console.log(RandNum[i]);
+    }
+
+
+    for (var i = 0; i < numq; i++) {
+        $('#addq').before('<div class="row"><div class="col-sm-12 col-lg-6"><p id="q' + i + '">' + (i + 1) + ') ' + Q[RandNum[i]] + '</p></div><div class="col-sm-12 col-lg-6"><input type="text" name="a' + i + '" id="a' + i + '"></div></div>');
+    }
+
     $('input').addClass('form-control');
 
     $('#game_form').submit(function (event) {
         score = 0;
 
-        for (var i = 1; i <= 10; i++) {
-            if ($('#a' + i).val().toString() == A[i - 1]) {
+        for (var i = 0; i < numq; i++) {
+            if ($('#a' + i).val().toString() == A[RandNum[i]]) {
                 score++;
             }
         }
@@ -33,10 +44,10 @@ $('document').ready(function () {
         console.log(data);
 
         console.log(score);
-        if (score >= 8) {
+        if (score >= numq - 2) {
             window.location.href = "end_game_1.html";
-        } else if (score < 8 &&
-            score > 4) {
+        } else if (score < (numq - 2) &&
+            score > (numq / 2 - 1)) {
             window.location.href = "end_game_2.html";
 
         } else {
