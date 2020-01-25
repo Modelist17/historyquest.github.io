@@ -44,14 +44,19 @@ $('document').ready(function () {
         console.log(data);
 
         console.log(score);
+        $('#score-in-modal').text("You score: " + score);
+
         if (score >= numq - 2) {
-            window.location.href = "end_game_1.html";
+            $('#score-in-modal').after(' <img src="https://media.giphy.com/media/x2woMnCz4W0Vy/giphy.gif"><audio src="mp3/Erika.mp3" autoplay>');
+            //window.location.href = "end_game_1.html";
         } else if (score < (numq - 2) &&
             score > (numq / 2 - 1)) {
-            window.location.href = "end_game_2.html";
+                $('#score-in-modal').after('<img src="https://media.giphy.com/media/x2woMnCz4W0Vy/giphy.gif"><audio src="mp3/mario_1.mp3" autoplay>');
+            //window.location.href = "end_game_2.html";
 
         } else {
-            window.location.href = "end_game_3.html";
+            $('#score-in-modal').after('<img src="https://media.giphy.com/media/x2woMnCz4W0Vy/giphy.gif"><audio src="mp3/porazhenie.mp3" autoplay>');
+            //window.location.href = "end_game_3.html";
         }
     });
 
